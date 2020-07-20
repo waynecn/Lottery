@@ -33,7 +33,7 @@ void MainWindow::on_generateBtn_clicked()
     qDebug() << "on_generateBtn_clicked";
     m_vecRandomData.clear();
     while (true) {
-        quint32 ret = m_rRed.generate() % 32;
+        quint32 ret = m_rRed.generate() % 34;
         if (ret == 0) {
             continue;
         }
@@ -41,7 +41,6 @@ void MainWindow::on_generateBtn_clicked()
         if (m_vecRandomData.indexOf(strRet) != -1) {
             continue;
         }
-        qDebug() << "ret:" << strRet;
         m_vecRandomData.push_back(strRet);
         if (m_vecRandomData.size() >= 6) {
             break;
@@ -51,15 +50,17 @@ void MainWindow::on_generateBtn_clicked()
     qSort(m_vecRandomData.begin(), m_vecRandomData.end());
 
     while (true) {
-        quint32 ret = m_rBlue.generate() % 16;
+        quint32 ret = m_rBlue.generate() % 17;
         if (ret == 0) {
             continue;
         }
         QString strRet = QString::asprintf("%02d", ret);
-        qDebug() << "ret:" << strRet;
         m_vecRandomData.push_back(strRet);
         break;
     }
+
+    qDebug() << "Lottery results:" << m_vecRandomData[0] << " " << m_vecRandomData[1] << " " << m_vecRandomData[2] << " "
+             << m_vecRandomData[3] << " " << m_vecRandomData[4] << " " << m_vecRandomData[5] << " " << m_vecRandomData[6];
 
     ui->pushButton->setText(m_vecRandomData[0]);
     ui->pushButton_2->setText(m_vecRandomData[1]);

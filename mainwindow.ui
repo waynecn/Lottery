@@ -6,12 +6,30 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>299</width>
-    <height>97</height>
+    <width>300</width>
+    <height>40</height>
    </rect>
   </property>
+  <property name="maximumSize">
+   <size>
+    <width>300</width>
+    <height>40</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <family>Arial</family>
+    <pointsize>10</pointsize>
+    <weight>75</weight>
+    <bold>true</bold>
+   </font>
+  </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>随机生成彩票号码</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>lottery.ico</normaloff>lottery.ico</iconset>
   </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QGridLayout" name="gridLayout">
@@ -26,23 +44,7 @@
          </size>
         </property>
         <property name="styleSheet">
-         <string notr="true">QPushButton {
-color: rgb(255, 255, 255);
-border-radius:150px;
-background-color:rgb(255, 0, 0);
-}
-QPushButton:hover {
-color:rgb(255, 255, 255);
-border-radius:150px;
-background-color:rgb(255, 85, 127);
-}
-QPushButton:pressed {
-color:rgb(255, 85, 127);	
-border-width:3;
-border-color:rgb(255, 0, 0);
-border-style:solid;
-background-color:cyan;
-}</string>
+         <string notr="true"/>
         </property>
         <property name="text">
          <string>01</string>
@@ -123,23 +125,7 @@ background-color:cyan;
          </size>
         </property>
         <property name="styleSheet">
-         <string notr="true">QPushButton {
-color: rgb(255, 255, 255);
-border-radius:150px;
-background-color:rgb(85, 170, 255);
-}
-QPushButton:hover {
-color:rgb(255, 255, 255);
-border-radius:150px;
-background-color:rgb(170, 255, 255);
-}
-QPushButton:pressed {
-color:rgb(255, 85, 127);	
-border-width:3;
-border-color:rgb(255, 0, 0);
-border-style:solid;
-background-color:rgb(170, 255, 255);
-}</string>
+         <string notr="true"/>
         </property>
         <property name="text">
          <string>07</string>
