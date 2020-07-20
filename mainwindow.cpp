@@ -3,6 +3,7 @@
 #include "common.h"
 
 #include <QDebug>
+#include <QTime>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -18,9 +19,8 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->pushButton_6->setStyleSheet(g_strRedBtnStyleSheet);
     ui->pushButton_7->setStyleSheet(g_strBlueBtnStyleSheet);
 
-    quint32 nRedStart = 1, nRedEnd = 32, nBlueStart = 1, nBlueEnd = 16;
-    m_rRed = QRandomGenerator(&nRedStart, &nRedEnd);
-    m_rBlue = QRandomGenerator(&nBlueStart, &nBlueEnd);
+    m_rRed = QRandomGenerator(QTime(0,0,0).secsTo(QTime::currentTime()));
+    m_rBlue = QRandomGenerator(QTime(0,0,0).secsTo(QTime::currentTime()));
 }
 
 MainWindow::~MainWindow()
