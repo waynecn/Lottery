@@ -5,6 +5,8 @@
 
 extern QString APPLICATION_DIR;
 
+const QString g_strLotteryFileName = "lotteryHistory.txt";
+
 const QString g_strRedBtnStyleSheet = "QPushButton {color: rgb(255, 255, 255); border-radius:150px; background-color:rgb(255, 0, 0);} \
         QPushButton:hover {color:rgb(255, 255, 255); border-radius:150px; background-color:rgb(255, 85, 127);} \
         QPushButton:pressed {color:rgb(255, 85, 127); border-width:3; border-color:rgb(255, 0, 0); border-style:solid; background-color:cyan;}";
